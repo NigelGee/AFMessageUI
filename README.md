@@ -4,6 +4,8 @@
 2. Import AFMeesage
 3. Add Modifier `.mailSheet(isPresent: )`
 ```swift
+import AFMeassgeUI
+import SwiftUI
 struct ContentView: View {
     @State private var showMailComposer = false
     var body: some View {
