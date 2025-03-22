@@ -1,7 +1,7 @@
 #  AFMessageUI
 
 1. Add to Swift Package Manager
-2. Import AFMeesage
+2. Import AFMeesageUI
 3. Add Modifier `.mailSheet(isPresent: )`
 ```swift
 import AFMeassgeUI
