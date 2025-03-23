@@ -1,6 +1,6 @@
 #  AFMessageUI
 
-A package to wrap UIKit Email in a ViewModifier for SwiftUI. `isPresented` and `toRecipients` are required, however you can have `subject` and the main `body` of email as well as CC and BCC recipients.
+A package to wrap UIKit Email in a ViewModifier for SwiftUI. `isPresented` and `toRecipients` are required, however you can have `subject` and the main `body` of email as well as CC and BCC recipients. It will handle if a devices can send email and give error sheet if so.
 
 - **Important:** This will not send an email. It will present the email composer and user has the option to send the email or cancel it.
 
