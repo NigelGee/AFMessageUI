@@ -1,13 +1,19 @@
 #  AFMessageUI
 
+A package to wrap UIKit Email in a ViewModifier for SwiftUI. `isPresented` and `toRecipients` are required, however you can have `subject` and the main `body` of email as well as CC and BCC recipients.
+
+- **Important:** This will not send an email. It will present the email composer and user has the option to send the email or cancel it.
+
 1. Add to Swift Package Manager
 2. Import AFMeesageUI
-3. Add Modifier `.mailSheet(isPresent: )`
+3. Add Modifier `.mailSheet(isPresented:toRecipients)`
 ```swift
-import AFMeassgeUI
+import AFMessageUI
 import SwiftUI
+
 struct ContentView: View {
     @State private var showMailComposer = false
+    
     var body: some View {
         Button("Compose Mail") {
             showMailComposer.toggle()
