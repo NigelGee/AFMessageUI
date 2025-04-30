@@ -9,6 +9,7 @@ extension View {
     ///   - bccRecipients: n array of recipients to blind "cc" to. (Optional).
     ///   - subject: The subject line of email. (Optional).
     ///   - body: The main body of an an email. (Optional).
+    ///   - onDismiss: A closure that can run when sheet is dismissed.
     /// - Returns: A sheet with the email composer on a view when `isPresented` is `true`
     ///
     /// ```swift
@@ -24,7 +25,9 @@ extension View {
     ///             toRecipients: "myemail@example.com",
     ///             subject: "My Important Email",
     ///             body: "This is very important information."
-    ///         )
+    ///         ) {
+    ///             print("Closed")
+    ///         }
     ///    }
     /// }
     /// ```
