@@ -34,9 +34,7 @@ public struct MailView: UIViewControllerRepresentable {
             didFinishWith result: MFMailComposeResult,
             error: Error?
         ) {
-            defer {
-                parent.dismiss()
-            }
+            defer { parent.dismiss() }
 
             if let error {
                 parent.result = .failure(error)

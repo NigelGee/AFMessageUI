@@ -22,6 +22,7 @@ struct MailViewModifier: ViewModifier {
     let bccRecipients: [String]?
     let subject: String?
     let body: String?
+    let onDismiss: (() -> Void)?
 
     var canSendMail: Bool {
         MFMailComposeViewController.canSendMail()
@@ -34,7 +35,7 @@ struct MailViewModifier: ViewModifier {
             } message: {
                 Text(message)
             }
-            .sheet(isPresented: $isPresented) {
+            .sheet(isPresented: $isPresented, onDismiss: onDismiss) {
                 if canSendMail {
                     MailView(
                         result: $mailResult,

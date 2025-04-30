@@ -35,7 +35,8 @@ extension View {
         ccRecipients: [String]? = nil,
         bccRecipients: [String]? = nil,
         subject: String? = nil,
-        body: String? = nil
+        body: String? = nil,
+        onDismiss: (() -> Void)? = nil
     ) -> some View {
         modifier(
             MailViewModifier(
@@ -44,7 +45,8 @@ extension View {
                 ccRecipients: ccRecipients,
                 bccRecipients: bccRecipients,
                 subject: subject,
-                body: body
+                body: body,
+                onDismiss: onDismiss
             )
         )
     }
