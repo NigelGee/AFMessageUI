@@ -53,4 +53,47 @@ extension View {
             )
         )
     }
+
+    /// A method to return a sheet with the message composer.
+    /// - Parameters:
+    ///   - isPresented: A boolean to present the `messageSheet`
+    ///   - toRecipients: A variadic for a list of recipients to send to.
+    ///   - body: The main body of an an email. (Optional).
+    ///   - onDismiss: A closure that can run when sheet is dismissed.
+    /// - Returns: A sheet with the email composer on a view when `isPresented` is `true`
+    ///
+    /// ```swift
+    /// struct ContentView: View {
+    ///     @State private var showMessageComposer = false
+    ///     var body: some View {
+    ///         Button("Compose Mail") {
+    ///             showMessageComposer.toggle()
+    ///         }
+    ///         .buttonStyle(.bordered)
+    ///         .mailSheet(
+    ///             isPresented: $showMailComposer,
+    ///             toRecipients: "07795111222",
+    ///             body: "This is very important information."
+    ///         ) {
+    ///             print("Closed")
+    ///         }
+    ///    }
+    /// }
+    /// ```
+    /// - Important: This will not send an message. It will present the message composer and user has the option to send the message or not.
+    public func messageSheet(
+        isPresented: Binding<Bool>,
+        toRecipients: String...,
+        body: String? = nil,
+        onDismiss: (() -> Void)? = nil
+    ) -> some View {
+        modifier(
+            MessageViewModifier(
+                isPresented: isPresented,
+                toRecipients: toRecipients,
+                body: body,
+                onDismiss: onDismiss
+            )
+        )
+    }
 }
