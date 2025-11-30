@@ -32,7 +32,7 @@ struct ContentView: View {
             showMessageComposer.toggle()
         }
         .buttonStyle(.bordered)
-        .mailSheet(
+        .messageSheet(
             isPresented: $showMessageComposer,
             toRecipients: "07795111222",
             body: "This is very important message."
