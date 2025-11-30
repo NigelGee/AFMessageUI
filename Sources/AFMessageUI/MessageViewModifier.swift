@@ -64,6 +64,8 @@ struct MessageViewModifier: ViewModifier {
             @unknown default:
                 message = "Unknown Error"
             }
+
+            showAlert.toggle()
         }
     }
 }
