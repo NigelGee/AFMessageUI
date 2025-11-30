@@ -43,8 +43,8 @@ struct MessageViewModifier: ViewModifier {
                 } else {
                     ContentUnavailableView(
                         "No Message App Detected",
-                        image: "exclamationmark.message",
-                        description: Text("Device unalbe to send messages!")
+                        systemImage: "exclamationmark.message",
+                        description: Text("Device unable to send messages!")
                     )
                 }
             }
