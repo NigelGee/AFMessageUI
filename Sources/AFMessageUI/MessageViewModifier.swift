@@ -52,6 +52,8 @@ struct MessageViewModifier: ViewModifier {
     }
 
     /// A method that will display a message of the result of user sending message.
+    ///
+    /// A private method to show a message status.
     private func alertDisplay() {
         if let result {
             switch result {
