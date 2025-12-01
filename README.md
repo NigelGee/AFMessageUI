@@ -29,7 +29,7 @@ struct ContentView: View {
             body: "This is very important information."
         )
         
-        Button("Compose Mail") {
+        Button("Compose Message") {
             showMessageComposer.toggle()
         }
         .buttonStyle(.bordered)
