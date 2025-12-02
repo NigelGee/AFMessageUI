@@ -41,3 +41,4 @@ struct ContentView: View {
     }
 }
 ```
+Note: That if you added to a `ForEach` you may get a UI Error. Working on it
