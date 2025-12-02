@@ -58,11 +58,11 @@ struct MessageViewModifier: ViewModifier {
         if let result {
             switch result {
             case .cancelled:
-                message = "Message Cancelled!"
+                message = "Cancelled!"
             case .sent:
-                message = "Message Sent."
+                message = "Sent."
             case .failed:
-                message = "Message Failed to send!"
+                message = "Failed to send!"
             @unknown default:
                 message = "Unknown Error"
             }

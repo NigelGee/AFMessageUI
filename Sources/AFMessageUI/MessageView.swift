@@ -27,7 +27,7 @@ public struct MessageView: UIViewControllerRepresentable {
         @MainActor
         public func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
             defer { parent.dismiss () }
-
+            print(result.rawValue)
             parent.result = result
         }
     }

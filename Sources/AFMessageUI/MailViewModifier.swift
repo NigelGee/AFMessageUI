@@ -65,13 +65,13 @@ struct MailViewModifier: ViewModifier {
             case .success(let result):
                 switch result {
                 case .cancelled:
-                    message = "Mail Cancelled!"
+                    message = "Cancelled!"
                 case .saved:
-                    message = "Mail Saved to Draft."
+                    message = "Saved to Draft."
                 case .sent:
-                    message = "Mail Sent."
+                    message = "Sent."
                 case .failed:
-                    message = "Mail Failed to Send!"
+                    message = "Failed to Send!"
                 @unknown default:
                     message = "Unknown Error"
                 }
