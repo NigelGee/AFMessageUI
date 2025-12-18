@@ -6,7 +6,7 @@ A package to wrap UIKit Email and Message in a ViewModifier for SwiftUI. `isPres
 - **Note:** onDismiss closure will run even if email is not sent/canceled or device does not handle emails/messages.
 
 1. Add to Swift Package Manager
-2. Import AFMeesageUI
+2. Import AFMessageUI
 3. Add Modifier `.mailSheet(isPresented: toRecipients)` and or `.messageSheet(isPresented: toRecipients)`
 
 ```swift
