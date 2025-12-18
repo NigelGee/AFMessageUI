@@ -15,7 +15,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showMailComposer = false
-        @State private var showMessageComposer = false
+    @State private var showMessageComposer = false
     
     var body: some View {
         Button("Compose Mail") {
@@ -41,4 +41,3 @@ struct ContentView: View {
     }
 }
 ```
-Note: That if you added to a `ForEach` you may get a UI Error. Working on it
